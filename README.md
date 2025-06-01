@@ -2,6 +2,17 @@
 
 Are you looking forward to learn Jenkins right from Zero(installation) to Hero(Build end to end pipelines)? then you are at the right place. 
 
+## Installation on Docker
+Your Docker Desktop should be properlly installed.
+docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+Go to http://localhost:8080
+For First time, jenkins ask for admin credential
+Use command to get the credential:
+docker ps --> to get the container id
+docker exec <container_id> cat /var/jenkins_home/secrets/initialAdminPassword
+docker exec 41502dfbb937 cat /var/jenkins_home/secrets/initialAdminPassword
+
+
 ## Installation on EC2 Instance
 
 YouTube Video ->
